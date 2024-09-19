@@ -1,0 +1,454 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+
+@keyframes running-line {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+h1, h2, h3 {
+  font-family: "Merriweather";
+  margin: 0;
+}
+
+.page {
+  font-family: "GolosText", sans-serif;
+  color: #313131;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+/* Header */
+
+.header {
+  width: 100%;
+  padding: 26px 72px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+.header__container {
+  max-width: 1366px;
+  width: 100%;
+}
+
+.header__logo {
+  background-image: url(../assets/icons/logo.svg);
+  width: 246px;
+  height: 36px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header__logo:hover {
+  opacity: 0.7;
+}
+
+/* Content */
+
+.content {
+  width: 100%;
+}
+
+/* Cover */
+
+.cover {
+  width: 100%;
+  height: 700px;
+  background-image: url(../assets/images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 124px 72px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.cover__container {
+  max-width: 1366px;
+  width: 100%;
+}
+
+.cover__content {
+  max-width: 542px;
+  width: 100%;
+}
+
+.cover__title {
+  display: flex;
+  flex-direction: column;
+  font-size: 60px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.cover__title-child_center {
+  text-align: center;
+}
+
+.cover__title-child_right {
+  text-align: right;
+}
+
+.cover__text {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  margin: 24px 0 40px;
+}
+
+.cover__button-wrapper {
+  display: flex;
+  gap: 16px;
+}
+
+.cover__button {
+  font-family: "GolosText";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  padding: 16px 49px;
+  box-sizing: border-box;
+  border-radius: 66px;
+  border: none;
+  flex: 1;
+  background-color: #1F1F1F;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cover__button:hover {
+  background-color: #FBCE51;
+  color: #1F1F1F;
+}
+
+.cover__button_outlined {
+  background-color: transparent;
+  border: 2px solid #1F1F1F;
+  color: #1F1F1F;
+}
+
+.cover__button_outlined:hover {
+  background-color: #1F1F1F;
+  color: #FFFFFF;
+}
+
+/* Marquee */
+
+.marquee {
+	width: 100%;
+  background-color: #F54932;
+  padding: 18px 0;
+  overflow: hidden;
+}
+
+.marquee__container {
+  user-select: none;
+	width: 100%;
+	display: flex;
+	overflow: hidden;
+}
+
+.marquee__content {
+	flex-shrink: 0;
+	display: inline-flex;
+	counter-reset: item;
+	min-width: 100%;
+	animation: running-line 20s cubic-bezier(0, 0, 1, 1) infinite;
+}
+
+.marquee__item {
+	color: #FFFFFF;
+	font-family: 'Merriweather';
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 22px;
+	display: flex;
+	align-items: center;
+	width: max-content;
+}
+
+.marquee__item::after {
+	content: '';
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	background-color: #FFFFFF;
+	border-radius: 50%;
+	margin: 0 12px;
+}
+
+/* Lecture */
+
+.lecture {
+  width: 100%;
+  padding: 80px 72px 32px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+.lecture__container {
+  max-width: 1366px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+}
+
+.lecture__title-wrapper {
+  max-width: 764px;
+}
+
+.lecture__title {
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: uppercase;
+  max-width: 764px;
+  line-height: 1.35;
+  display: inline;
+}
+
+.lecture__title-highlight {
+  color: #F54932;
+  font-weight: 700;
+}
+
+.lecture__image {
+  border-radius: 50%;
+  width: 394px;
+  height: 250px;
+  grid-area: image;
+}
+
+.lecture__image_center {
+  display: none;
+}
+
+@media screen and (max-width: 1295px) {
+  /* Lecture */
+
+  .lecture__container {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .lecture__title {
+    max-width: 1100px;
+    text-align: center;
+  }
+
+  .lecture__title-wrapper {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lecture__image_center {
+    display: block;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  .lecture__image_rigth {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+  /* Header */
+
+  .header {
+    width: 100%;
+    padding: 26px 54px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+  }
+
+  /* Cover 1200px */
+
+  .cover {
+    height: 620px;
+    padding: 124px 54px;
+  }
+
+  .cover__content {
+    max-width: 460px;
+  }
+
+  .cover__title {
+    font-size: 50px;
+    font-weight: 400;
+  }
+
+  .cover__text {
+    font-size: 16px;
+    margin: 24px 0 40px;
+    margin-top: 18px;
+    margin-bottom: 32px;
+  }
+
+  .cover__button {
+    font-size: 14px;
+    padding: 14px 35px;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+
+  /* Cover */
+
+  .cover {
+    background-image: url(../assets/images/bg-cover-mobile.jpg);
+    height: 950px;
+    background-position: bottom;
+  }
+
+  .cover__content {
+    margin: 0 auto;
+  }
+
+  /* Lecture 1040 */
+
+  .lecture__title {
+    font-size: 28px;
+  }
+
+}
+
+@media screen and (max-width: 790px) {
+
+  /* Cover */
+
+  .cover {
+    height: 850px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+
+  /* Header */
+
+  .header {
+    padding: 20px;
+  }
+
+  .header__logo {
+    width: 213px;
+    height: 32px;
+  }
+
+  /* Lecture 560 */
+
+  .lecture {
+    padding: 48px 20px 17px;
+  }
+
+  .lecture__title {
+    text-align: left;
+  }
+
+  .lecture__image {
+    width: 335px;
+    height: 213px;
+  }
+
+  /* Cover */
+
+  .cover {
+    height: 712px;
+    padding: 90px 20px;
+  }
+
+  .cover__title {
+    font-size: 36px;
+    font-weight: 400;
+    max-width: 335px;
+    margin: 0 auto;
+  }
+
+  .cover__text {
+    text-align: left;
+    margin: 24px 0 32px;
+  }
+
+  .cover__button-wrapper {
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+  .cover__button {
+    padding: 15px 43px;
+  }
+
+  .cover__button_outlined {
+    background-color: #FFFFFF;
+    border: none;
+    color: #1F1F1F;
+  }
+
+  /* Marquee */
+
+  .marquee {
+    padding: 10px 0;
+  }
+
+  .marquee__item {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 365px) {
+
+  /* Cover */
+
+  .cover {
+    height: 660px;
+  }
+
+  .cover__title {
+    font-size: 30px;
+    max-width: 280px;
+  }
+
+  .cover__text {
+    text-align: left;
+    margin: 18px 0 26px;
+  }
+
+  .cover__button {
+    font-size: 12px;
+  }
+
+
+}
