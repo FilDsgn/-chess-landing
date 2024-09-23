@@ -7,7 +7,9 @@
   <title>Document</title>
   <link rel="stylesheet" href="./styles/style.css">
 
-  <script src="./scripts/marquee.js" defer></script>
+  <script src="./scripts/marquee.js" type="module" defer></script>
+  <script src="./scripts/stagesSlider.js" type="module" defer></script>
+  <script src="./scripts/participantsSlider.js" type="module" defer></script>
 </head>
 
 <body class="page">
@@ -31,8 +33,8 @@
           <p class="cover__text">Оплатите взнос на телеграммы для&nbspорганизации Международного васюкинского турнира
             по&nbspшахматам</p>
           <div class="cover__button-wrapper">
-            <button class="cover__button">Поддержать шахматную мысль</button>
-            <button class="cover__button cover__button_outlined">Подробнее о&nbspтурнире</button>
+            <a href="#lecture" class="cover__button">Поддержать шахматную мысль</a>
+            <a href="#info" class="cover__button cover__button_outlined">Подробнее о&nbspтурнире</a>
           </div>
         </div>
       </div>
@@ -42,7 +44,7 @@
     <section class="marquee"></section>
 
     <!-- Lecture -->
-    <section class="lecture">
+    <section id="lecture" class="lecture">
       <div class="lecture__container">
         <div class="lecture__title-wrapper">
           <h3 class="lecture__title">Чтобы поддержать Международный васюкинский турнир
@@ -56,7 +58,142 @@
         <img class="lecture__image lecture__image_rigth" src="./assets/images/chess-players.jpg" alt="chess players" />
       </div>
     </section>
+
+    <!-- Info -->
+    <section id="info" class="info">
+      <div class="info__container">
+
+        <figure class="info__image-container">
+          <img class="info__image" src="./assets/images/chess-player-poster.png" />
+        </figure>
+        <div class="info__content">
+          <h3 class="info__title">и Сеанс <span class="info__title-highlight">одновременной игры в&nbspшахматы
+              на&nbsp160&nbspдосках</span> гроссмейстера
+            О.&nbspБендера</h3>
+          <table class="info__table">
+            <tbody class="info__table-body">
+              <tr class="info__table-row">
+                <th class="info__table-row-item info__table-row-item_top">Место проведения:</th>
+                <td class="info__table-row-item info__table-row-item_top">Клуб «Картонажник»</td>
+              </tr>
+              <tr class="info__table-row">
+                <th class="info__table-row-item">Дата и&nbspвремя мероприятия:</th>
+                <td class="info__table-row-item">22&nbspиюня 1927&nbspг. в&nbsp18:00</td>
+              </tr>
+              <tr class="info__table-row">
+                <th class="info__table-row-item">Стоимость входных билетов:</th>
+                <td class="info__table-row-item">20&nbspкоп.</td>
+              </tr>
+              <tr class="info__table-row">
+                <th class="info__table-row-item">Плата за&nbspигру:</th>
+                <td class="info__table-row-item">50&nbspкоп.</td>
+              </tr>
+              <tr class="info__table-row">
+                <th class="info__table-row-item info__table-row-item_bottom">Взнос на&nbspтелеграммы:</th>
+                <td class="info__table-row-item info__table-row-item_bottom"><span
+                    class="info__text-highlight info__text-highlight_striked">100 руб.</span> 21 руб. 16 коп.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><a href="#" class="info__link">По&nbspвсем вопросам обращаться в&nbspадминистрацию
+              к&nbspК.&nbspМихельсону</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stages -->
+    <section class="stages">
+      <div class="stages__container">
+        <div class="stages__title-wrapper">
+          <h2 class="stages__title">Этапы преображения Васюков</h2>
+          <p class="stages__description">Будущие источники обогащения васюкинцев</p>
+        </div>
+        <div class="stages__content">
+          <img class="stages__content-image" src="./assets/images/airplane.png" alt="airplane" />
+          <div class="stages__content-wrapper">
+            <article class="stages__item">
+              <div class="stages__item-number-wrapper"><span class="stages__item-number">1</span></div>
+              <p class="stages__item-text">Строительство железнодорожной магистрали Москва-Васюки</p>
+            </article>
+            <article class="stages__item">
+              <div class="stages__item-number-wrapper"><span class="stages__item-number">2</span></div>
+              <p class="stages__item-text">Открытие фешенебельной гостиницы «Проходная пешка» и&nbspдругих небоскрёбов
+              </p>
+            </article>
+            <article class="stages__item">
+              <div class="stages__item-number-wrapper"><span class="stages__item-number">3</span></div>
+              <p class="stages__item-text">Поднятие сельского хозяйства в&nbspрадиусе на&nbspтысячу километров:
+                производство
+                овощей,
+                фруктов, икры, шоколадных конфет</p>
+            </article>
+            <article class="stages__item">
+              <div class="stages__item-number-wrapper"><span class="stages__item-number">4</span></div>
+              <p class="stages__item-text">Строительство дворца для&nbspтурнира</p>
+            </article>
+            <article class="stages__item">
+              <div class="stages__item-number-wrapper"><span class="stages__item-number">5</span></div>
+              <p class="stages__item-text">Размещение гаражей для&nbspгостевого автотранспорта</p>
+            </article>
+            <article class="stages__item">
+              <div class="stages__item-number-wrapper"><span class="stages__item-number">6</span></div>
+              <p class="stages__item-text">Постройка сверхмощной радиостанции для&nbspпередачи всему миру сенсационных
+                результатов
+              </p>
+            </article>
+            <article class="stages__item">
+              <div class="stages__item-number-wrapper"><span class="stages__item-number">7</span></div>
+              <p class="stages__item-text">Создание аэропорта «Большие Васюки» с&nbspрегулярным отправлением почтовых
+                самолётов
+                и&nbspдирижаблей во&nbspвсе&nbspконцы света, включая Лос-Анжелос и&nbspМельбурн</p>
+            </article>
+          </div>
+          <div class="stages__navigation carousel-navigation">
+            <button
+              class="stages__button stages__button_left carousel-navigation__btn carousel-navigation__btn_left"></button>
+            <div class="stages__dots-container carousel-navigation__dots-container"></div>
+            <button
+              class="stages__button stages__button_right carousel-navigation__btn carousel-navigation__btn_right"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Participants -->
+    <section class="participants">
+      <div class="participants__container">
+        <h2 class="participants__title">Участники турнира</h2>
+        <div class="participants__navigation carousel-navigation">
+          <button
+            class="participants__button participants__button_left carousel-navigation__btn carousel-navigation__btn_left"></button>
+          <div class="participants__counter carousel-navigation__counter-container">
+            <span
+              class="participants__counter-current carousel-navigation__counter carousel-navigation__counter_active"></span>
+            <span class="carousel-navigation__counter">/</span>
+            <span class="participants__counter-total carousel-navigation__counter"></span>
+          </div>
+          <button
+            class="participants__button participants__button_right carousel-navigation__btn carousel-navigation__btn_right"></button>
+        </div>
+        <div class="participants__content"></div>
+      </div>
+    </section>
+
+    <!-- Marquee -->
+    <section class="marquee"></section>
   </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container">
+      <p class="footer__text">Все&nbspперсонажи, события и&nbspцитаты являются вымышленными
+        и&nbspне&nbspпринадлежат
+        создателям сайта.
+        С&nbspподробностями можно познакомиться в&nbspглаве XXXIV романа Ильи Ильфа и&nbspЕвгения Петрова «Двенадцать
+        стульев».</p>
+    </div>
+
+  </footer>
 
   <script>
 
